@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
 # Add deadsnakes PPA for newer Python versions
-RUN apt-get update && apt-get install -y software-properties-common && \
-    add-apt-repository ppa:deadsnakes/ppa
+# RUN apt-get update && apt-get install -y software-properties-common && \
+#     add-apt-repository ppa:deadsnakes/ppa
 
 # Update package lists and install Python 3.10 and dependencies
 RUN apt-get update && apt-get install -y \
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean
 
 # Create symlink for python3.10 to be used as python3
-RUN ln -s /usr/bin/python3.10 /usr/bin/python3
+# RUN ln -s /usr/bin/python3.10 /usr/bin/python3
 
 # Verify Python and pip installation
 RUN python3 --version && pip3 --version
