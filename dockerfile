@@ -7,8 +7,8 @@ FROM ubuntu:latest
 # Update package lists and install Python 3.10 and dependencies
 RUN apt-get update && apt-get install -y \
   python3.10 \
-  python3.10-venv \
-  python3.10-dev \
+#   python3.10-venv \
+#   python3.10-dev \
   python3-pip \
   git \
   libyaml-dev \
