@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean
 
 # Install PyYAML
-RUN pip3 install --no-cache-dir -v pyyaml
+RUN pip3 install pyyaml
 
 # Copy feed.py to the container
 COPY feed.py /usr/bin/feed.py
