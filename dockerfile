@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y \
   python3.10 \
 #   python3.10-venv \
 #   python3.10-dev \
-  python3-pip \
   git \
   libyaml-dev \
   && apt-get clean
+
+RUN set -xe && apt-get -yqq update && apt-get -yqq install python3-pip && pip3 install --upgrade pip
 
 # Create symlink for python3.10 to be used as python3
 # RUN ln -s /usr/bin/python3.10 /usr/bin/python3
@@ -21,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 RUN python3 --version && pip3 --version
 
 # Upgrade pip to the latest version
-RUN pip3 install --upgrade pip
+# RUN pip3 install --upgrade pip
 
 # Install PyYAML with verbose output
 RUN pip3 install --no-cache-dir -v pyyaml
