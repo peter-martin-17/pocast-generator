@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean
 
 
-# Install PyYAML with verbose output
-RUN pip3 install pyyaml
+# # Install PyYAML with verbose output
+# RUN pip3 install pyyaml
 
 # # Verify PyYAML installation
 # RUN python3 -c "import yaml; print(yaml.__version__)"
