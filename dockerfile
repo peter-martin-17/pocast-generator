@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
   libyaml-dev \
   && apt-get clean
 
+# Verify Python and pip installation
+RUN python3.10 --version && pip3 --version
+
 # Install PyYAML with verbose output
 RUN pip3 install --no-cache-dir -v pyyaml
 
